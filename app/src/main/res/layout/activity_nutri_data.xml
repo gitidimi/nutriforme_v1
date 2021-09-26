@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightGreen">
+
+
+    <EditText
+        android:id="@+id/input_ingredients"
+        android:layout_width="290dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="56dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="@string/notice_2"
+        android:inputType="text"
+        android:paddingLeft="28dp"
+        android:paddingRight="28dp"
+        android:textColor="@color/orange"
+        android:textColorHint="@color/orange"
+        android:textSize="18sp"
+        android:fontFamily="@font/baloo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_info" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_reset"
+        android:layout_width="100dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/custom_button_2"
+        android:text="@string/btn_new_recipe"
+        android:textAllCaps="false"
+        android:textColor="@color/green"
+        android:fontFamily="@font/baloo"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/input_ingredients"
+        app:layout_constraintTop_toBottomOf="@+id/input_ingredients" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_short_info"
+        android:layout_width="135dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/custom_button_2"
+        android:text="@string/notice_short_analysis"
+        android:textAllCaps="false"
+        android:textColor="@color/green"
+        android:fontFamily="@font/baloo"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/input_ingredients"
+        app:layout_constraintTop_toBottomOf="@+id/input_ingredients" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_cal"
+        android:layout_width="100dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/custom_button_2"
+        android:text="@string/notice_calories"
+        android:textAllCaps="false"
+        android:textColor="@color/green"
+        android:fontFamily="@font/baloo"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/btn_reset"
+        app:layout_constraintTop_toBottomOf="@+id/btn_reset" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_long_info"
+        android:layout_width="135dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/custom_button_2"
+        android:text="@string/notice_long_analysis"
+        android:textAllCaps="false"
+        android:textColor="@color/green"
+        android:fontFamily="@font/baloo"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/btn_short_info"
+        app:layout_constraintTop_toBottomOf="@+id/btn_short_info" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_info"
+        android:layout_width="100dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="26dp"
+        android:background="@drawable/custom_button"
+        android:text="@string/info"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:fontFamily="@font/baloo"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/input_ingredients"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:layout_width="409dp"
+        android:layout_height="517dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="1dp"
+        android:background="@drawable/card_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_long_info">
+
+        <TextView
+            android:id="@+id/output_ingredients_Energy"
+            android:layout_width="150dp"
+            android:layout_height="22dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="55dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/baloo"
+            android:text="Energy"
+            android:textColor="@color/green"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/output_ingredients_Fat"
+            android:layout_width="160dp"
+            android:layout_height="22dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="210dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/baloo"
+            android:text="Fat"
+            android:textColor="@color/green"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/output_ingredients_Saturated"
+            android:layout_width="150dp"
+            android:layout_height="22dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="55dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="47dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/baloo"
+            android:text="Saturated"
+            android:textColor="@color/green"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/output_ingredients_Carbs"
+            android:layout_width="160dp"
+            android:layout_height="22dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="210dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="47dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/baloo"
+            android:text="Carbs"
+            android:textColor="@color/green"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/output_ingredients_Protein"
+            android:layout_width="150dp"
+            android:layout_height="22dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="55dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="73dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/baloo"
+            android:text="Protein"
+            android:textColor="@color/green"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/output_ingredients_Cholesterol"
+            android:layout_width="160dp"
+            android:layout_height="22dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="210dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="73dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/baloo"
+            android:text="Cholesterol"
+            android:textColor="@color/green"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/output_ingredients_Sodium"
+            android:layout_width="150dp"
+            android:layout_height="22dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="55dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="99dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/baloo"
+            android:text="Sodium"
+            android:textColor="@color/green"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/output_ingredients_Calcium"
+            android:layout_width="160dp"
+            android:layout_height="22dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="210dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="99dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/baloo"
+            android:text="Calcium"
+            android:textColor="@color/green"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/output_ingredients_Magnesium"
+            android:layout_width="150dp"
+            android:layout_height="22dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="55dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="125dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/baloo"
+            android:text="Magnesium"
+            android:textColor="@color/green"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/output_ingredients_Potassium"
+            android:layout_width="160dp"
+            android:layout_height="22dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="210dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="125dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/baloo"
+            android:text="Potassium"
+            android:textColor="@color/green"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/output_ingredients_Iron"
+            android:layout_width="150dp"
+            android:layout_height="22dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="55dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="151dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/baloo"
+            android:text="Iron"
+            android:textColor="@color/green"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/output_ingredients_Zinc"
+            android:layout_width="160dp"
+            android:layout_height="22dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="210dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="151dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/baloo"
+            android:text="Zinc"
+            android:textColor="@color/green"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/output_ingredients_Phosphorus"
+            android:layout_width="160dp"
+            android:layout_height="22dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="55dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="176dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/baloo"
+            android:text="Phosphorus"
+            android:textColor="@color/green"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/output_ingredients_Vitamin_C"
+            android:layout_width="160dp"
+            android:layout_height="22dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="210dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="177dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/baloo"
+            android:text="Vitamin C"
+            android:textColor="@color/green"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/output_ingredients_Thiamin"
+            android:layout_width="150dp"
+            android:layout_height="22dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="55dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="203dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/baloo"
+            android:text="Thiamin (B1)"
+            android:textColor="@color/green"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/output_ingredients_Riboflavin"
+            android:layout_width="160dp"
+            android:layout_height="22dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="210dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="203dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/baloo"
+            android:text="Riboflavin"
+            android:textColor="@color/green"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/output_ingredients_Niacin"
+            android:layout_width="150dp"
+            android:layout_height="22dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="55dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="229dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/baloo"
+            android:text="Niacin (B3)"
+            android:textColor="@color/green"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/output_ingredients_Vitamin_B6"
+            android:layout_width="160dp"
+            android:layout_height="22dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="210dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="229dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/baloo"
+            android:text="Vitamin (B6)"
+            android:textColor="@color/green"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/output_ingredients_Vitamin_K"
+            android:layout_width="150dp"
+            android:layout_height="22dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="55dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="256dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/baloo"
+            android:text="Vitamin K"
+            android:textColor="@color/green"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/output_ingredients_Vitamin_B12"
+            android:layout_width="160dp"
+            android:layout_height="22dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="210dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="255dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/baloo"
+            android:text="Vitamin B12"
+            android:textColor="@color/green"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/output_ingredients_Vitamin_D"
+            android:layout_width="150dp"
+            android:layout_height="22dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="55dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="282dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/baloo"
+            android:text="Vitamin D"
+            android:textColor="@color/green"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/output_ingredients_Fiber"
+            android:layout_width="160dp"
+            android:layout_height="22dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="210dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="282dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/baloo"
+            android:text="Fiber"
+            android:textColor="@color/green"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/output_ingredients_Vitamin_A"
+            android:layout_width="150dp"
+            android:layout_height="22dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="55dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="309dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/baloo"
+            android:text="Vitamin A"
+            android:textColor="@color/green"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/output_ingredients_Vitamin_E"
+            android:layout_width="160dp"
+            android:layout_height="22dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="210dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="309dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/baloo"
+            android:text="Vitamin E"
+            android:textColor="@color/green"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/output_ingredients_Folate"
+            android:layout_width="240dp"
+            android:layout_height="22dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="55dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="335dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/baloo"
+            android:text="Folate equivalent (total)"
+            android:textColor="@color/green"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/output_ingredients_Calories"
+            android:layout_width="190dp"
+            android:layout_height="22dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="55dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="361dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/baloo"
+            android:text="Calories"
+            android:textColor="@color/orange"
+            android:textSize="16sp" />
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/ic_back"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/input_ingredients"
+        app:layout_constraintStart_toStartOf="@+id/input_ingredients"
+        app:tint="@color/green" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
